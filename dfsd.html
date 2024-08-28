@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test</title>
+</head>
+<body data-timer-enabled="true">
+    <audio id="short-audio" src="Audios/FLS240615_W3_An_Atmosphere_of_Peace_Handling_Conflicts_in_Marriage_-_Rev..mp3" controls></audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const timerEnabled = document.body.dataset.timerEnabled === "true";
+            console.log('Timer Enabled:', timerEnabled);
+
+            if (timerEnabled) {
+                console.log('Starting 35-minute timer functionality.');
+                
+                const shortAudioPlayer = document.getElementById('short-audio');
+                
+                // Ensure the audio element is ready to play
+                shortAudioPlayer.addEventListener('canplaythrough', () => {
+                    console.log('Audio can be played');
+                    
+                    // Simulate the 35-minute delay and play the short audio
+                    setTimeout(() => {
+                        console.log('Pausing main audio and playing short audio.');
+                        shortAudioPlayer.play().then(() => {
+                            console.log('Short audio is playing');
+                        }).catch(error => {
+                            console.error('Error playing short audio:', error);
+                        });
+
+                        setTimeout(() => {
+                            console.log('Short audio ended');
+                            shortAudioPlayer.pause();
+                            shortAudioPlayer.currentTime = 0;
+                        }, 35000); // 35 seconds
+                    }, 1000); // 1-second delay for testing
+                });
+
+                shortAudioPlayer.addEventListener('error', (e) => {
+                    console.error('Error with audio element:', e);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Search</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <script src="https://kit.fontawesome.com/3ed11200e3.js" crossorigin="anonymous"></script>
+      <!-- site icon -->
+      <link rel="icon" href="images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+      <!-- responsive queries -->
+      <link rel="stylesheet" href="queries.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section">
+                        <a href="dashboard.html"><img class="logo_icon img-responsive" src="images/logo/Logo half.png" alt="#" /></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="images/person2.jpg" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>Grace Ore</h6>
+                           <p><span class="online_animation"></span> Online</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="index.html"><i class="fa fa-home yellow_color"></i> <span>Home</span></a>
+                     </li>
+                     <li><a href="All Messages.html"><i class="fa fa-envelope-o orange_color"></i> <span>All Messages</span></a>
+                     </li>
+                     <li>
+                        <a href="Ministers.html"><i class="fa fa-person purple_color"></i> <span>Ministers</span></a>
+                     </li>
+                     <li><a href="Meetings.html"><i class="fa fa-comment purple_color2"></i> <span>Meetings</span></a></li>
+                     <li>
+                        <a href="Worship.html"><i class="fa fa-music blue2_color"></i> <span>Worship</span></a>
+                     </li>
+                     <li><a href="Songs.html"><i class="fa fa-guitar blue1_color"></i> <span>Songs Birthed By TCGC</span></a></li>
+                     <li><a href="Glory Journal.html"><i class="fa fa-book "></i> <span>Glory Journals</span></a></li>
+                     <li class="hidden-menu"><a href="Profile.html"><i class="fa fa-user green_color"></i> <span>My Profile</span></a></li>
+                     <li class="hidden-menu"><a href="Change_Password.html"><i class="fa fa-key blue1_color"></i> <span>Change Password</span></a></li>
+                     <li class="hidden-menu"><a href="Subscribe.html"><i class="fa fa-bookmark-o red_color"></i> <span>Subscription Plan</span></a></li>
+                     <li class="hidden-menu"><a href="login.html"><i class="fa fa-sign-out brown_color"></i> <span>Log Out</span></a></li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="logo_section">
+                           <a href="index.html"><img class="img-responsive" src="images/logo/Logo full.png" alt="#" /></a>
+                        </div>
+                        <div class="center-content" id="center-content">
+                           <i class="fa-solid fa-search hide" id="search-icon"></i>
+                           <div class="search" id="search">
+                              <i class="fa-solid fa-search fa-lg"></i>
+                              <input type="search" id="search-input" name="search-input" placeholder="Search messages, songs ...">
+                              <a href="search.html"><i class="fa-solid fa-search fa-lg" id="clear"></i></a>
+                           </div>
+                        </div>
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul>
+                                 <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                 <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                              </ul>
+                              <ul class="user_profile_dd">
+                                 <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/person2.jpg" alt="#" /><span class="name_user">Grace Ore</span></a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="Profile.html"><i class="fa fa-user"></i><span>&nbsp;&nbsp;&nbsp;My Profile</span></a>
+                                       <a class="dropdown-item" href="Change_Password.html"><i class="fa fa-key"></i><span>&nbsp;&nbsp;&nbsp;Change Password</span></a>
+                                       <a class="dropdown-item" href="Subscribe.html"><i class="fa fa-bookmark-o"></i><span>&nbsp;&nbsp;&nbsp;Subscription Plan</span></a>
+                                       <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i><span>&nbsp;&nbsp;&nbsp;Log Out</span> </a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+
+               <!-- MOBILE SEARCH BAR -->
+               <div class="mobile-search hide" id="mobile-search">
+                  <i class="fa-solid fa-arrow-left fa-lg" id="close-search"></i>
+                  <input type="search" id="mobile-search-input" name="search-input" placeholder="Search messages, songs ...">
+                  <a href="search.html"><i class="fa-solid fa-search fa-lg mobile-clear" id="mobile-clear"></i></a>
+               </div>
+               <!-- end topbar -->
+               
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Welcome <span>Grace</span></h2>
+                           </div>
+                        </div>
+                     </div>
+
+                     <section class="main-content">
+								<!-- <div class="minister-info">
+									<img id="minister-image" src="" alt="Minister Image" />
+									<div class="minister-details">
+										<h1 id="minister-name"></h1>
+									</div>
+								</div> -->
+				
+								<div class="all-messages">
+									<div class="message">
+										<div class="music" id="music1">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio1">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music" id="music2">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Fall On Me" data-image="images/AEO.png" data-image="images/AEO.png" data-artist="A Great Big World" data-src="A Great Big World & Christina Aguilera - Fall On Me (Official).mp3">Fall On Me</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Fall On Me" data-image="images/AEO.png" data-image="images/AEO.png" data-artist="A Great Big World" data-src="A Great Big World & Christina Aguilera - Fall On Me (Official).mp3">A Great Big World</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Fall On Me" data-image="images/AEO.png" data-artist="A Great Big World" data-src="A Great Big World & Christina Aguilera - Fall On Me (Official).mp3">Fall On Me</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio2">
+												<source src="A Great Big World & Christina Aguilera - Fall On Me (Official).mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music" id="music3">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Maverick_City_Music_Firm_Foundation_He_Won_t_feat_Cody_Car.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Maverick_City_Music_Firm_Foundation_He_Won_t_feat_Cody_Car.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Maverick_City_Music_Firm_Foundation_He_Won_t_feat_Cody_Car.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+												<!-- <span class="material-symbols-outlined">more_vert</span> -->
+											</div>
+											<audio class="audio-player" id="audio3">
+												<source src="Maverick_City_Music_Firm_Foundation_He_Won_t_feat_Cody_Car.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music" id="music4">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio4">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music" id="music5">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio5">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music6">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio6">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music7">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio7">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music8">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio8">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music9">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio9">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music10">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio10">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music11">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio11">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music12">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio12">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music13">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio13">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music14">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio14">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music15">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio15">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music16">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio16">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music17">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio17">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+										<div class="music"  id="music18">
+											<div class="image">
+												<img src="images/AEO.png" alt="Gratitude by Anendlessocean">
+												<div class="image-overlay">
+													<i class="fa-solid fa-play fa-lg" id="play-icon"></i>
+												</div>
+											</div>
+											<div class="music-info">
+												<h2><a href="#" class="song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a></h2>
+												<div class="info">
+													<a href="#" class="artist song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Anendlessocean</a>
+													<i class="fa-regular fa-circle fa-2xs"></i>
+													<a href="#" class="title song-title" data-song="Gratitude" data-image="images/AEO.png" data-artist="Anendlessocean" data-src="Anendlessocean - Gratitude.mp3">Gratitude</a>
+												</div>
+												<p class="duration"></p>
+											</div>
+											<div class="overlay-icons">
+												<i class="fa-regular fa-thumbs-up fa-sm thumbs"></i>
+												<i class="fa-regular fa-thumbs-down fa-sm thumbs"></i>
+											</div>
+											<audio class="audio-player" id="audio18">
+												<source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg">
+												Your browser does not support the audio element.
+											</audio>
+										</div>
+									</div>
+								</div>
+						</section>
+				
+                     
+							
+                  </div>
+               </div>
+               <!-- end dashboard inner -->
+            </div>
+         </div>
+
+         <!-- AUDIO PLAYER BAR -->
+         <div class="audio-controls-bar hide-player" id="audio-controls-bar">
+            <div class="progress-container">
+               <input id="progress-bar" type="range" value="0" min="0" max="100" step="0.1">
+            </div>
+            <div class="controls">
+               <div class="control-left">
+                  <span id="duration-count" class="duration-count">0:00/<span class="duration"></span></span>
+               </div>
+               <div class="control-center ">
+                  <div class="song-info">
+                     <span id="current-title"></span> - <span id="current-artist"></span>
+                  </div>
+                  <div class="bar-icons">
+                     <i id="backward-button" class="fa-solid fa-lg fa-backward control-button"></i>
+                     <i id="play-pause-button" class="fa-solid fa-lg fa-play control-button"></i>
+                     <i id="forward-button" class="fa-solid fa-lg fa-forward control-button"></i>
+                  </div>
+               </div>
+               <div class="control-right">
+                  <i id="volume-button" class="fa-solid fa-lg fa-volume-high control-button"></i>
+                  <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+                  <i id="shuffle-button" class="fa-solid fa-lg fa-shuffle control-button"></i>
+                  <i id="repeat-button" class="fa-solid fa-lg fa-repeat control-button"></i>
+               </div>
+            </div>
+            <audio id="bottom-audio">
+               <!-- <source src="Anendlessocean - Gratitude.mp3" type="audio/mpeg"> -->
+               Your browser does not support the audio element.
+            </audio>
+         </div>
+
+      </div>
+      <script src="js/Audio Player Bar.js"></script>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script>
+      <!-- select country -->
+      <script src="js/bootstrap-select.js"></script>
+      <!-- owl carousel -->
+      <script src="js/owl.carousel.js"></script> 
+      <!-- chart js -->
+      <script src="js/Chart.min.js"></script>
+      <script src="js/Chart.bundle.min.js"></script>
+      <script src="js/utils.js"></script>
+      <script src="js/analyser.js"></script>
+      <!-- nice scrollbar -->
+      <script src="js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+
+         document.addEventListener('DOMContentLoaded', () => {
+            // Clearing the search input
+            const clearSearchField = document.getElementById("clear")
+            const searchInput = document.getElementById("search-input")
+            const searchIcon = document.getElementById("search-icon")
+            const closeSearchBar = document.getElementById("close-search")
+            const clearSearchBar = document.getElementById("mobile-clear")
+            const mobileSearchBar = document.getElementById("mobile-search")
+            const mobileSearchInput = document.getElementById("mobile-search-input")
+
+            function clearInputField(input, icon) {
+               input.value = ""
+               icon.style.display = "none"
+               input.focus()
+            }
+
+            // clearing the search fields
+            clearSearchField.addEventListener("click", () => clearInputField(searchInput, clearSearchField))
+            // mobile
+            clearSearchBar.addEventListener("click", () => clearInputField(mobileSearchInput, clearSearchBar))
+
+            // showing the cancel icon when there is input
+            searchInput.addEventListener('input', () => {
+               if (searchInput.value.length > 0) {
+                  clearSearchField.style.display = 'block';
+               } else {
+                  clearSearchField.style.display = 'none';
+               }
+            });
+
+            // shows the cancel icon when there's input
+            mobileSearchInput.addEventListener('input', () => {
+               if (mobileSearchInput.value.length > 0) {
+                  clearSearchBar.style.display = 'block';
+               } else {
+                  clearSearchBar.style.display = 'none';
+               }
+            });
+            
+            // opens and closes the mobile Search Bar when the search icon is clicked
+            searchIcon.addEventListener("click", () => DisplayDiv(mobileSearchBar))
+            closeSearchBar.addEventListener("click", () => DisplayDiv(mobileSearchBar))
+
+            function DisplayDiv(div) {
+               if (div.classList.contains("hide")) {
+                  div.classList.remove('hide');
+                  div.classList.add('show');
+               } else {
+                  div.classList.remove('show');
+                  div.classList.add('hide');
+               }
+            }
+
+            const ministerInfo = JSON.parse(localStorage.getItem('minister'));
+
+            document.getElementById('minister-name').textContent = ministerInfo.ministerName;
+            document.getElementById('minister-image').src = ministerInfo.ministerImage;
+            if (ministerInfo) {
+               document.getElementById('minister-name').textContent = ministerInfo.ministerName;
+            	document.getElementById('minister-image').src = ministerInfo.ministerImage;
+            } else {
+                // Handle case where no minister info is found in localStorage
+               console.log('No minister information found in localStorage.');
+            }
+            
+            // moving to a new page when the song title is clicked
+            document.querySelectorAll('.song-title').forEach(title => {
+					title.addEventListener('click', event => {
+						event.preventDefault(); // Prevent default link behavior
+
+						// Get song details from data attributes
+						const song_title = event.target.getAttribute('data-song');
+						const artist = event.target.getAttribute('data-artist');
+						const src = event.target.getAttribute('data-src');
+						const image = event.target.getAttribute('data-image');
+
+						// Store song details in localStorage
+						localStorage.setItem('currentSong', JSON.stringify({ song_title, artist, src, image }));
+
+						// Redirect to the new page
+						window.location.href = 'Song-Title.html'; // Change this to your target page
+					});
+            });
+
+         });
+
+         
+      </script>
+      <!-- custom js -->
+      <script src="js/chart_custom_style1.js"></script>
+      <script src="js/custom.js"></script>
+
+   </body>
+</html>

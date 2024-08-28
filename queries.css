@@ -1,0 +1,342 @@
+/* MOBILE */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* SEARCHBAR */
+    .center-content {
+        padding-bottom: 8px;
+        width: 100px;
+        justify-content: end;
+    }
+
+    .center-content .search {
+        display: none;
+    }
+
+    .center-content i.hide {
+        display: block;
+        align-self: end;
+        padding-bottom: 2px;
+        margin-right: 3px;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    /* MOBILE SEARCH BAR */
+    .mobile-search  {
+        display: flex;
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px 0;
+        z-index: 5000;
+        text-align: center;
+        background-color: #fff;
+        height: auto;
+    }
+
+    .mobile-search.hide {
+        display: none;
+    }
+
+    .mobile-search.show {
+        display: block;
+    }
+
+    .mobile-search input {
+        width: 200px;
+        padding: 5px 15px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        color: #000;
+    }
+
+    .mobile-search input[type="search"]::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .mobile-search i {
+        color: #000;
+        /* font-size: 30px; */
+        /* margin-top: 5px; */
+    }
+
+    .mobile-search i.mobile-clear {
+        display: none;
+    }
+
+    /* MAIN-CONTENT */
+    /* HEADING */
+    .header-01 .recent .heading h4 {
+        font-size: 1.5rem;
+    }
+
+    .overlay-icons {
+        padding-right: 15px;
+    }
+
+    /* Categories */
+    .midde_cont .category-01 {
+        overflow-y: hidden;
+        overflow-x: auto;
+        margin-bottom: 10px;
+    }
+
+    .midde_cont .category-01 ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .midde_cont .category-01 ul li {
+        padding: 10px;
+        background-color: #ccc;
+        border-radius: 12px;
+    }
+
+    /* AUDIO PLAY BAR */
+    .controls {
+        /* padding: 5px; */
+    }
+
+    /* .audio-controls-bar .controls .control-right span {
+        font-size: 25px;
+    }
+
+    .audio-controls-bar .controls .control-center .bar-icons span {
+        font-size: 25px;
+    } */
+    
+    span#play-pause-button {
+        font-size: 30px;
+    }
+
+    .control-center, .control-right {
+        gap: 5px;
+    }
+
+    #current-artist, #current-title  {
+        font-size: 15px;
+    }
+
+    #current-artist {
+        display: block;
+    }
+
+    .song-info {
+        text-align: center;
+    }
+
+    /* CATEGORY AND ARTIST SECTION */
+    .category-content .categories .category a img,
+    .artist-content .artists .artist a img {
+        width: 100px;
+    }
+
+    .category-content header h2,
+    .artist-content header h2{
+        font-size: 1.5rem;
+    }
+
+    /* TITLE LINK AND MINISTER PAGE */
+    .main-content .song-content,
+    .main-content .minister-info,
+    .main-content .category-info {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main-content .song-content .song-details,
+    .main-content .minister-info .minister-details,
+    .main-content .category-info .category-details {
+        text-align: center;
+    }
+
+    .main-content .song-content img,
+    .main-content .minister-info img,
+    .main-content .category-info img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* All Messages */
+    .all-messages .message {
+        flex-wrap: no-wrap;
+    }
+
+    .all-messages .message .music {
+        width: 100%;
+    }
+    
+    /* MINISTERS AND MEETINGS*/
+    .ministers,
+    .meetings {
+        justify-content: center;
+    }
+
+    .ministers .minister a img {
+        width: 120px;
+    }
+
+    /* ALL MESSAGES - ADMIN */
+    .container .main-content .audio-container table{
+        margin-right: 5px;
+    }
+
+    /* UPLOAD MESSAGES */
+    .upload-container {
+        width: 100vw;
+    }
+
+    /* JOURNALS */
+    .journals {
+        justify-content: center;
+    }
+
+    .journal {
+        width: 160px;
+        white-space: wrap;
+    }
+    
+    .journal img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* search bar */
+    .center-content {
+        width: 30%;
+    }
+
+    .center-content .search input {
+        width: 100%;
+        max-height: 35px;
+    }
+
+    /* TITLE LINK PAGE */
+    .main-content .song-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main-content .song-content .song-details {
+        text-align: center;
+    }
+
+    .main-content .song-content img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* MINISTERS AND MEETINGS*/
+    .ministers,
+    .meetings {
+        justify-content: center;
+    }
+
+     /* UPLOAD MESSAGES */
+    .upload-container {
+        width: 100vw;
+        padding-left: 0;
+        /* margin-right: 20px; */
+    }
+
+    .upload-container form {
+        margin-right: 15px;
+    }
+}
+
+/* MOBILE AND TABLET */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .container .topbar .top-content .center-content {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .center-content .search {
+        width: 400px;
+    }
+
+    .center-content .search input {
+        width: 100%;
+    }
+
+    /* MAIN-CONTENT */
+    .container .main-content {
+        margin-left: 20px;
+        /* margin-right: 20px; */
+        width: 96%;
+    }
+
+     /* All Messages */
+    .all-messages .message .music {
+        width: 47%;
+    }
+
+    /* MINISTERS AND MEETINGS*/
+    .ministers,
+    .meetings {
+        justify-content: center;
+    }
+}
+
+/* TABLET */
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+} */
+
+/* @media screen and (min-width: 1025px) and (max-width: 1280px) { */
+@media screen and (min-width: 1025px) and (max-width: 1823px) {
+    .container .topbar .top-content .center-content .search {
+        justify-items: start;
+        width: 50%;
+    }
+    
+    .container .topbar .top-content .center-content .search input {
+        font-size: 20px;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    /* All Messages */
+    .center-content .search{
+        /* width: 50%; */
+        /* max-height: 40px; */
+    }
+
+    .center-content .search input {
+        width: 300px;
+        height: 35px;
+    }
+    
+    .all-messages .message .music {
+        width: 30%;
+    }
+}
+
+
+@media screen and (min-width: 1281px) and (max-width: 1823px){
+    .center-content .search input{
+        width: 400px;
+        max-height: 35px;
+    }
+
+}
+
+/* BIGGER SCREENS */
+@media screen and (max-width: 1199px) {
+    .hidden-menu {
+        display: block;
+    }
+
+}
