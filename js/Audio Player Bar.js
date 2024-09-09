@@ -358,37 +358,33 @@ function loadPlayerState() {
 // Load state when the page is loaded
 window.addEventListener('load', loadPlayerState);
 
-
 // checks if the current page should exclude the 35-minute audio interruption functionality
 const excludeInterruption = document.body.getAttribute('data-exclude-interruption') === 'true';
 
 if (!excludeInterruption) {
     // Define short audio element
     const shortAudioPlayer = document.getElementById('short-audio');
-    // const intervalDuration = 35 * 60; 
-    // window.intervalDuration = 35 * 60; 
-    // let nextPauseTime = intervalDuration; 
-    let nextPauseTime = intervalDuration; 
     let hasPausedForShortAudio = false;
+    let currentAudio = null;
+    let lastShortAudioTime = 0;
 
     // Function to handle the time update and check for the interval mark
     function handleTimeUpdate() {
-        if (!currentAudio) {
-            console.log('No current audio playing');
-            return;
-        }
-
         const currentTime = Math.floor(currentAudio.currentTime);
         console.log(`Current time: ${currentTime} seconds`);
 
-        if (currentTime >= nextPauseTime && !hasPausedForShortAudio) {
-            console.log('Pausing main audio and playing short audio');
-            hasPausedForShortAudio = true;
+        for (const interval of intervals) {
+            if (currentTime == interval && !hasPausedForShortAudio && (currentTime - lastShortAudioTime >= 35 * 60)) {
+                console.log('Pausing main audio and playing short audio');
+                hasPausedForShortAudio = true;
 
-            currentAudio.pause();
-            shortAudioPlayer.play();
+                currentAudio.pause();
+                shortAudioPlayer.play();
+                lastShortAudioTime = currentTime; // Update last short audio playback time
 
-            shortAudioPlayer.addEventListener('ended', resumeMainAudioOnce, { once: true });
+                shortAudioPlayer.addEventListener('ended', resumeMainAudioOnce, { once: true });
+                break; // Exit the loop once the short audio is played
+            }
         }
     }
 
@@ -400,7 +396,6 @@ if (!excludeInterruption) {
             currentAudio.play();
         }
         hasPausedForShortAudio = false;
-        nextPauseTime += intervalDuration;
     }
 
     // Ensure currentAudio is set and event listener is attached
@@ -411,11 +406,10 @@ if (!excludeInterruption) {
             currentAudio = audioPlayer;
             console.log('Current audio set:', currentAudio.src);
 
+            hasPausedForShortAudio = false;
             currentAudio.addEventListener('timeupdate', handleTimeUpdate);
+
         });
     });
 }
-
-
-
 

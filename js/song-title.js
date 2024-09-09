@@ -190,28 +190,27 @@ if (currentSong) {
     if (!excludeInterruption) {
         // Define short audio element
         const shortAudioPlayer = document.getElementById('short-audio');
-        // const intervalDuration = 35 * 60; 
-        let nextPauseTime = intervalDuration; 
         let hasPausedForShortAudio = false;
+        let audioPlayer = null;
+        let lastShortAudioTime = 0;
 
         // Function to handle the time update and check for the interval mark
         function handleTimeUpdate() {
-            // if (!currentSong) {
-            //     console.log('No current audio playing');
-            //     return;
-            // }
-
             const currentTime = Math.floor(audioPlayer.currentTime);
             console.log(`Current time: ${currentTime} seconds`);
 
-            if (currentTime >= nextPauseTime && !hasPausedForShortAudio) {
-                console.log('Pausing main audio and playing short audio');
-                hasPausedForShortAudio = true;
-
-                audioPlayer.pause();
-                shortAudioPlayer.play();
-
-                shortAudioPlayer.addEventListener('ended', resumeMainAudioOnce, { once: true });
+            for (const interval of intervals) {
+                if (currentTime == nextPauseTime && !hasPausedForShortAudio && (currentTime - lastShortAudioTime >= intervalDuration)) {
+                    console.log('Pausing main audio and playing short audio');
+                    hasPausedForShortAudio = true;
+    
+                    audioPlayer.pause();
+                    shortAudioPlayer.play();
+                    lastShortAudioTime = currentTime;
+    
+                    shortAudioPlayer.addEventListener('ended', resumeMainAudioOnce, { once: true });
+                    break;
+                }
             }
         }
 
@@ -223,10 +222,8 @@ if (currentSong) {
                 audioPlayer.play();
             }
             hasPausedForShortAudio = false;
-            nextPauseTime += intervalDuration;
         }
 
         audioPlayer.addEventListener('timeupdate', handleTimeUpdate);
     }
-
 }
