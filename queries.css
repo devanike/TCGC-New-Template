@@ -151,6 +151,7 @@
     .category-content .categories .category a img,
     .artist-content .artists .artist a img {
         width: 100px;
+        height: 100px;
     }
 
     .category-content header h2,
